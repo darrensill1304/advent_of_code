@@ -63,9 +63,7 @@
 
 def findMarkerStart(n_uniq_req, str):
     idx = n_uniq_req
-    while True:
-        if (idx == len(str)):
-            break
+    while idx < len(str):
         substr = str[idx-n_uniq_req:idx]
         unique_chars = set(substr)
         if (len(unique_chars) == n_uniq_req):
